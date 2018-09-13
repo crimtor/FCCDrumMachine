@@ -8,6 +8,8 @@ import { Component } from "react";
 import { updateDisplay } from "../actions/index";
 import { bindActionCreators } from "redux";
 import DrumBank from "../components/drumbank";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import DrumPad from "../containers/drumpad";
 
 const DISPLAY = 'Display';
@@ -15,20 +17,19 @@ const DISPLAY = 'Display';
 class App extends Component{
   constructor(props){
     super(props);
+    let myDisp = this.props.display
+    if(!myDisp){
+      myDisp = "FCC Drum Machine";
+    }
 }
   render() {
     return (
       <div id="app">
-        <div id="controls-container">
-
-          <div id="header">
-
-          </div>
+          <Header />
           <div className="control"
-            id="display"
-            >{this.props.display}</div>
-        </div>
+            id="display">{this.myDisp}</div>
         <DrumBank />
+        <Footer />
       </div>
     );
   }

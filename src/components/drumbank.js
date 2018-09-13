@@ -76,7 +76,7 @@ export default class DrumBank extends Component{
         });
 
     return(
-      <div id="drumbank">
+      <div className="row" id="drumbank">
         {drumBank}
       </div>
     )

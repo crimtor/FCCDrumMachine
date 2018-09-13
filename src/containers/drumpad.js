@@ -43,7 +43,7 @@ class DrumPad extends Component{
   render(){
     return (
       <div
-        className="drum-pad"
+        className="drum-pad col-4"
           id={this.props.id}
           onClick={(event) => { this.playSound(event); this.updateDisplay(event);} }>
           <p>{this.props.keyTrigger}</p>
